@@ -33,7 +33,6 @@ export class Form_Page {
       } 
       else if (gender === 'other') {
         await this.page.getByText('Other', { exact: true }).click();
-        
       }
   }
 
@@ -44,7 +43,6 @@ export class Form_Page {
 
   async enter_date(){
     const date_field = this.page.locator('#dateOfBirthInput');
-    
     //await date_field.fill(date);
     await date_field.click();
     await this.page.getByRole('option', { name: 'Choose Monday, March 31st,' }).click();
@@ -73,12 +71,12 @@ export class Form_Page {
         }
   }
 
-  async enter_current_address(address){
+  async enter_current_address(address) {
     const current_address = this.page.getByRole('textbox', { name: 'Current Address' });
     await current_address.fill(address);
   }
 
-  async enter_city_state(){
+  async enter_city_state() {
     const state_field = this.page.locator('#state');
     const city_field = this.page.locator('#city');
 
@@ -89,16 +87,10 @@ export class Form_Page {
 
   }
 
-  async submit(){
+  async submit() {
     const submit_button = this.page.locator('#submit');
     await submit_button.click()
   }
-
-  
-
-
-  
-
 
      
 }

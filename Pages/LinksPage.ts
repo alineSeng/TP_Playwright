@@ -8,13 +8,10 @@ export class Links_Page {
       this.page = page;
       
   }
-
- 
   
   async clickToHomeLink() {
     const home_link = await this.page.getByRole('link', { name: 'Home', exact: true })
     await home_link.click()
-
   }
 
 
@@ -24,7 +21,6 @@ export class Links_Page {
     await created_link.click()
     await expect(message).toBeVisible()
     await expect(message).toContainText('Link has responded with staus 201 and status text Created');
-
   }
  
   async clickToNoContentLinkAndCheckMessage(){
@@ -33,7 +29,6 @@ export class Links_Page {
     await no_content_link.click()
     await expect(message).toBeVisible()
     await expect(message).toContainText('Link has responded with staus 204 and status text No Content');
-
   }
 
 

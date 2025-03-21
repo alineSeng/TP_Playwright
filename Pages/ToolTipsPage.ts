@@ -1,7 +1,5 @@
 import { Page, expect } from '@playwright/test';
 
-
-
 export class Tool_Tips_Page {
   readonly page: Page;
 
@@ -22,7 +20,6 @@ export class Tool_Tips_Page {
     await console.log(`Hover text: ${hover_text_value}`);
     expect(hover_text_value).toBe('You hovered over the Button')
 
-
   }
 
   async hover_field_and_check() {
@@ -37,7 +34,6 @@ export class Tool_Tips_Page {
     await console.log(`Hover text: ${hover_text_value}`);
     expect(hover_text_value).toBe('You hovered over the text field')
 
-
   }
   
   async hover_contrary_and_check() {
@@ -51,7 +47,6 @@ export class Tool_Tips_Page {
     
     await console.log(`Hover text: ${hover_text_value}`);
     expect(hover_text_value).toBe('You hovered over the Contrary')
-
 
   }
   
